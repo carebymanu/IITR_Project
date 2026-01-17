@@ -1,7 +1,7 @@
 # IITR_Project
 IIT Ropar Final Project (iitrprai_24091692)
 
-AI-Driven IT Service Management Automation using NLP and Knowledge-Based Systems”
+# “AI-Driven IT Service Management Automation using NLP and Knowledge-Based Systems”¶
 AI-Based Incident Categorization and Resolution Recommendation System
 
 ABSTRACT (What, Why, How, Results)
@@ -28,7 +28,47 @@ Recommend possible resolution based on similar past incidents
 Real-World Relevance
 Faster ticket routing improves store uptime and reduces business losses in retail operations.
 
-CONCLUSION & FUTURE SCOPE
+
+# METHODOLOGY (Approach & Architecture)¶
+Overall Architecture
+
+User Input ↓ NLP Preprocessing ↓ TF-IDF Vectorization ↓ Logistic Regression Classifier ↓ Category / Issue Prediction ↓ KEDB Knowledge Retrieval
+
+Algorithms Used
+
+TF-IDF Vectorizer
+
+Logistic Regression
+
+Cosine Similarity (Resolution Recommendation)
+
+# DATA UNDERSTANDING & PREPARATION¶
+Dataset Source
+
+Collected from a real retail IT support environment
+
+Stored in Excel format
+
+Files Used
+
+File	Purpose
+tickets.xlsx	Historical incident data
+Sites.xlsx	Site master
+Inventory.xlsx	Asset inventory
+Complaints.xlsx	Complaint register
+KEDB.xlsx	Knowledge base
+KEDB_Solution.xlsx	Solutions
+Preprocessing Steps
+
+Missing value handling (fillna)
+
+Text concatenation (TITLE + DESCRIPTION)
+
+Column cleaning
+
+Feature engineering (TEXT column)
+
+# CONCLUSION & FUTURE SCOPE¶
 Conclusion
 
 The project demonstrates how AI can significantly enhance ITSM efficiency by automating classification, complaint handling, and knowledge resolution.
@@ -42,22 +82,3 @@ SLA breach prediction
 Web-based UI (Streamlit)
 
 Integration with ServiceNow / Jira
-
-EXPERIMENTS & RESULTS
-Experimental Setup
-
-Python 3.x
-
-Jupyter Notebook
-
-Scikit-learn
-
-Pandas, NumPy
-
-Findings
-
-NLP significantly improves ticket handling
-
-Knowledge reuse reduces resolution time
-
-System scales well for large datasets
